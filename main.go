@@ -1,7 +1,7 @@
 package main
 
 import (
-	"news"
+	"github.com/freshman-tech/news-demo-starter-files/news"
 	"bytes"
 	"fmt"
 	"log"
