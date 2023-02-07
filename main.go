@@ -1,17 +1,18 @@
 package main
 
 import (
-	"github.com/freshman-tech/news-demo-starter-files/news"
 	"bytes"
-	"fmt"
+	"html/template"
 	"log"
+	"math"
 	"net/http"
 	"net/url"
 	"os"
-	"html/template"
-	"github.com/joho/godotenv"
-	"time"
 	"strconv"
+	"time"
+
+	"github.com/onspeedhp/news-demo-starter-files/news"
+	"github.com/joho/godotenv"
 )
 
 type Search struct {

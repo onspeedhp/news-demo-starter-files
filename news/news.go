@@ -1,19 +1,13 @@
 package news
 
-import {
+import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"time"
-}
-
-type Client struct {
-	http     *http.Client
-	key      string
-	PageSize int
-}
+)
 
 type Article struct {
 	Source struct {
@@ -33,6 +27,12 @@ type Results struct {
 	Status       string    `json:"status"`
 	TotalResults int       `json:"totalResults"`
 	Articles     []Article `json:"articles"`
+}
+
+type Client struct {
+	http     *http.Client
+	key      string
+	PageSize int
 }
 
 func NewClient(httpClient *http.Client, key string, pageSize int) *Client {
